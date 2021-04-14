@@ -1,0 +1,68 @@
+:root {
+    --paleBlue: #ade8f4;
+    --black: #000;
+    --white: #fff;
+    --green: #2c6e49;
+}
+
+#addStock {
+    grid-area: addStock;
+}
+
+#removeStock {
+    grid-area: removeStock;
+}
+
+#stockLevels {
+    grid-area: stockLevels;
+}
+
+.bodyItems {
+    display: grid;
+    place-items: center;
+    grid-template-areas: 'addStock removeStock' 'stockLevels stockLevels';
+}
+
+#stockLevels {
+    display: flex;
+    justify-content: center;
+}
+
+#stockLevels {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.productRow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardHolder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 250px;
+}
+
+@media only screen and (max-width: 700px) {
+    .bodyItems {
+        grid-template-areas: 'addStock' 'removeStock' 'stockLevels';
+    }
+    .productRow {
+        justify-content: space-between;
+    }
+    .cardHolder {
+        width: 120px;
+    }
+    .card {
+        width: 6rem;
+    }
+    .card-body p {
+        font-size: 10px;
+    }
+}
